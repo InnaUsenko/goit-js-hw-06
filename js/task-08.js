@@ -9,7 +9,9 @@ function myFun(event) {
   } = event.currentTarget;
   if (email.value === "" || password.value === "") {
     alert("All fields must be filled!");
+    return;
   }
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  const user = { email: email.value, password: password.value };
+  console.log(user);
   event.currentTarget.reset();
 }
